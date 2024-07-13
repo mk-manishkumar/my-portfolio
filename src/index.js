@@ -5,7 +5,9 @@ let icons = document.querySelectorAll(".icons");
 const scrollUp = document.getElementById("scrollUp");
 
 // after clicking resume button
-resume.addEventListener("click", () => alert("Will Upload soon"));
+resume.addEventListener("click", () => {
+  window.open("https://drive.google.com/file/d/1M0-YgixEayxSouphODpe76MqoWNN4cRv/view?usp=sharing", "_blank");
+});
 
 // for dark/light theme
 icons.forEach((icon) => {
@@ -76,3 +78,48 @@ document.querySelectorAll(".nav a").forEach((n) =>
     nav.classList.remove("active");
   })
 );
+
+// Generate a unique ID
+
+function generateUUID() {
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+    var r = (Math.random() * 16) | 0,
+      v = c == "x" ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
+}
+
+const userId = generateUUID();
+
+// for sending email
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("sendMessage").addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    if (name && email && subject && message) {
+      emailjs
+        .send("myService_test1", "template_ob04hza", {
+          from_name: name,
+          from_email: email,
+          subject: subject,
+          message: message,
+        })
+        .then(
+          (response) => {
+            alert("Message sent successfully!");
+          },
+          (error) => {
+            alert("Failed to send message. Please try again later.");
+          }
+        );
+    } else {
+      alert("Please fill out all required fields.");
+    }
+  });
+});

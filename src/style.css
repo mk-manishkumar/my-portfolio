@@ -126,8 +126,10 @@ a {
 
 .intro .logo img {
   border-radius: 50%;
-  width: 100%;
-  border: 5px solid #2563eb;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
 }
 
 /* About Me */
@@ -154,6 +156,7 @@ a {
   color: var(--secondary-color);
   padding: 8px 2rem;
   border-radius: 8px;
+  border: none;
 }
 
 .about_me .resume:hover {
@@ -432,7 +435,7 @@ a {
   margin-top: 1rem;
 }
 
-#contact .send-message a {
+#contact .send-message button {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   padding: 10px 25px;
   border-radius: 8px;
