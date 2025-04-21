@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import { TbGridDots } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import { TbArrowRight } from "react-icons/tb";
 
 const Portfolio = ({ show, setShow }) => {
   const projects = [
@@ -40,85 +41,38 @@ const Portfolio = ({ show, setShow }) => {
       thumbnail: "/js_projects.jpg",
       projectUrl: "https://js-mini-projects-mk.netlify.app/",
     },
+    {
+      _id: "6",
+      title: "Watchwise",
+      category: "Full Stack",
+      thumbnail: "/watchwise.jpg",
+      projectUrl: "https://watchwise-yt.vercel.app/",
+    },
   ];
+
   return (
     <section className="page portfolioPage">
       <Navbar show={show} />
       <TbGridDots onClick={() => setShow(!show)} className="hamburger" />
-      <div className="banner">
-        <div className="header">
-          <img src="/star.png" alt="star" /> <h1>ALL PROJECTS</h1>
-          <img src="/star.png" alt="star" />
-        </div>
-        <div className="latest-projects">
-          <div className="first-column">
-            {projects.slice(0, 3).map((element) => {
-              return (
-                <div className="card" key={element._id}>
-                  <img src={element.thumbnail} alt="project-thumbnail" />
-                  <div>
-                    <span>
-                      <p>{element.category}</p>
-                      <p>{element.title}</p>
-                    </span>
-                    <span>
-                      <Link to={element.projectUrl} target="_blank">
-                        <img src="/arrow.svg" alt="arrow" />
-                      </Link>
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-          <div className="second-column">
-            <div className="header">
-              <img src="/star.png" alt="star" />
-              <h1>ALL PROJECTS</h1>
-              <img src="/star.png" alt="star" />
-            </div>
-            <div className="projects">
-              {projects.slice(3, 5).map((element) => {
-                return (
-                  <div className="card" key={element._id}>
-                    <img src={element.thumbnail} alt="project-thumbnail" />
-                    <div>
-                      <span>
-                        <p>{element.category}</p>
-                        <p>{element.title}</p>
-                      </span>
-                      <span>
-                        <Link to={element.projectUrl} target="_blank">
-                          <img src="/arrow.svg" alt="arrow" />
-                        </Link>
-                      </span>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-        <div className="remaining-projects">
-          {projects.slice(5).map((element) => {
-            return (
-              <div className="card" key={element._id}>
-                <img src={element.thumbnail} alt="project-thumbnail" />
-                <div>
-                  <span>
-                    <p>{element.category}</p>
-                    <p>{element.title}</p>
-                  </span>
-                  <span>
-                    <Link to={element.projectUrl} target="_blank">
-                      <img src="/arrow.svg" alt="arrow" />
-                    </Link>
-                  </span>
-                </div>
+      <h1>ALL PROJECTS</h1>
+
+      <div className="projects">
+        {projects.map((project) => (
+          <div className="project" key={project._id}>
+            <img src={project.thumbnail} alt={project.title} />
+            <div className="overlay">
+              <div className="title-category">
+                <h2>{project.title}</h2>
+                <p>{project.category}</p>
               </div>
-            );
-          })}
-        </div>
+              <div className="link-to-project">
+                <Link to={project.projectUrl} target="_blank">
+                  <TbArrowRight style={{ color: "gray", fontSize: "1.5rem" }} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
