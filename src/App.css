@@ -10,6 +10,16 @@
   display: none;
 }
 
+/* GLOBAL CLASS */
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ========================== NAV-BAR ====================================  */
 .nav {
   display: flex;
   padding: 20px 4rem;
@@ -74,7 +84,7 @@
   .hamburger {
     display: block;
     position: fixed;
-    right: 4%;
+    left: 4%;
     top: 4%;
     font-size: 2rem;
     z-index: 10;
@@ -116,14 +126,7 @@
   }
 }
 
-.page {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-  position: relative;
-}
-
+/* =============================== HOME PAGE =========================== */
 .homePage {
   background: #000 url("/portfolio-bg.png") no-repeat center center;
   background-size: cover;
@@ -438,10 +441,8 @@
   }
 }
 
-
-
-/* ========================= RESUME PAGE ===================================== */
-.resumePage {
+/* ========================= CAREER PAGE ===================================== */
+.careerPage {
   min-height: 100vh;
   justify-content: flex-start;
   background: rgba(0, 0, 0, 0.6) url(/resume-bg.jpg);
@@ -452,45 +453,45 @@
   color: #fff;
   padding-bottom: 3rem;
 }
-.resumePage .banner {
+.careerPage .banner {
   display: flex;
   height: 100%;
   padding-top: 2rem;
   flex-wrap: wrap;
 }
-.resumePage .first-column,
-.resumePage .second-column,
-.resumePage .third-column {
+.careerPage .first-column,
+.careerPage .second-column,
+.careerPage .third-column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
   height: auto;
 }
-.resumePage .first-column {
+.careerPage .first-column {
   padding-left: 4.5rem;
 }
-.resumePage .second-column,
-.resumePage .third-column {
+.careerPage .second-column,
+.careerPage .third-column {
   padding-left: 40px;
 }
-.resumePage .third-column {
+.careerPage .third-column {
   padding-right: 4.5rem;
 }
-.resumePage .third-column div:nth-of-type(2),
-.resumePage .third-column div:nth-of-type(3) {
+.careerPage .third-column div:nth-of-type(2),
+.careerPage .third-column div:nth-of-type(3) {
   margin-top: 2rem;
 }
-.resumePage .third-column div:nth-of-type(3) .hobbies span div:nth-of-type(2) {
+.careerPage .third-column div:nth-of-type(3) .hobbies span div:nth-of-type(2) {
   margin-top: 0;
 }
-.resumePage h3 {
+.careerPage h3 {
   font-size: 1.75rem;
   width: fit-content;
   position: relative;
   margin-bottom: 1.5rem;
 }
-.resumePage h3::before {
+.careerPage h3::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -528,7 +529,7 @@
 .progressBar span svg {
   position: absolute;
 }
-.resumePage .third-column div p {
+.careerPage .third-column div p {
   display: flex;
   flex-direction: column;
   font-size: 1.15rem;
@@ -668,35 +669,53 @@
 .personal-skills p {
   font-size: 1.15rem;
 }
+
+.blogs p a {
+  color: #fff;
+}
+
+.blogs p a:hover {
+  color: #0393c4;
+  transition: 0.5s;
+  text-decoration: underline;
+}
+
+.blogs span a {
+  color: #0393c4;
+}
+
+.blogs span a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 1550px) {
-  .resumePage .first-column {
+  .careerPage .first-column {
     width: 33.33333%;
     flex: none;
   }
-  .resumePage .second-column {
+  .careerPage .second-column {
     width: 66.66666%;
     flex: none;
     padding-right: 4.5rem;
   }
-  .resumePage .third-column {
+  .careerPage .third-column {
     width: 100%;
     flex: none;
     display: flex;
     flex-direction: row;
-    padding-left: 4.5rem;
     padding: 40px 4.5rem;
   }
-  .resumePage .third-column div:nth-of-type(2),
-  .resumePage .third-column div:nth-of-type(3) {
+  .careerPage .third-column div:nth-of-type(2),
+  .careerPage .third-column div:nth-of-type(3) {
     margin-top: 0;
   }
 }
 @media (max-width: 1550px) {
-  .resumePage .first-column,
-  .resumePage .second-column {
+  .careerPage .first-column,
+  .careerPage .second-column {
     width: 50%;
   }
-  .resumePage .first-column {
+  .careerPage .first-column {
     height: auto;
   }
   .progressBar span {
@@ -704,15 +723,15 @@
   }
 }
 @media (max-width: 1350px) {
-  .resumePage .third-column div {
+  .careerPage .third-column div {
     padding: 0 20px;
   }
-  .resumePage .third-column div:nth-of-type(1) {
+  .careerPage .third-column div:nth-of-type(1) {
     padding-left: 0;
   }
 }
 @media (max-width: 1300px) {
-  .resumePage h3 {
+  .careerPage h3 {
     font-size: 1.4rem;
   }
   .organization p:nth-of-type(1),
@@ -721,7 +740,7 @@
   }
   .organization p:nth-of-type(2),
   .education p:nth-of-type(2),
-  .resumePage .third-column div p {
+  .careerPage .third-column div p {
     font-size: 1.15rem;
     font-weight: 400;
   }
@@ -733,22 +752,22 @@
   }
 }
 @media (max-width: 1250px) {
-  .resumePage .third-column {
+  .careerPage .third-column {
     flex-wrap: wrap;
   }
-  .resumePage .third-column div:nth-of-type(1),
-  .resumePage .third-column div {
+  .careerPage .third-column div:nth-of-type(1),
+  .careerPage .third-column div {
     padding: 0;
     width: 100%;
     margin-bottom: 2.5rem;
   }
-  .resumePage .third-column div:nth-of-type(3) {
+  .careerPage .third-column div:nth-of-type(3) {
     margin: 0;
   }
-  .resumePage .third-column .hobbies span div {
+  .careerPage .third-column .hobbies span div {
     margin: 0;
   }
-  .resumePage .third-column div p {
+  .careerPage .third-column div p {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -757,8 +776,8 @@
   }
 }
 @media (max-width: 1050px) {
-  .resumePage .first-column,
-  .resumePage .second-column {
+  .careerPage .first-column,
+  .careerPage .second-column {
     width: 100%;
     padding: 40px 4.5rem;
   }
@@ -772,17 +791,17 @@
   }
 }
 @media (max-width: 700px) {
-  .resumePage .first-column,
-  .resumePage .second-column,
-  .resumePage .third-column {
+  .careerPage .first-column,
+  .careerPage .second-column,
+  .careerPage .third-column {
     padding: 40px 2rem;
   }
-  .resumePage {
+  .careerPage {
     padding-bottom: 1rem;
   }
 }
 @media (max-width: 670px) {
-  .resumePage .third-column .hobbies {
+  .careerPage .third-column .hobbies {
     flex-wrap: wrap;
   }
   .hobbies span {
@@ -799,178 +818,81 @@
   justify-content: flex-start;
   height: fit-content;
   min-height: 100vh;
-  width: 100vw;
-}
-.portfolioPage .banner {
-  max-width: 1300px;
-  margin: 0 auto;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  display: flex;
-  flex-direction: column;
-}
-.portfolioPage .banner .latest-projects {
-  display: flex;
-  height: 100%;
-}
-.portfolioPage .banner .latest-projects .first-column {
-  flex: 1;
-  padding: 0 10px;
-  display: flex;
-  flex-direction: column;
-}
-.portfolioPage .banner .latest-projects .second-column {
-  flex: 2;
-  padding: 0 10px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
 }
 
-.banner .header,
-.second-column .header {
-  font-size: 3rem;
+.portfolioPage h1 {
+  text-align: center;
+}
+
+.portfolioPage .projects {
+  display: flex;
   justify-content: center;
-  margin-bottom: 1.5rem;
-  align-items: center;
-}
-.banner .header {
-  display: none;
-}
-.second-column .header {
-  display: flex;
-}
-.banner .header img,
-.second-column .header img {
-  height: 80px;
-  width: 80px;
-  margin: 0 20px;
-}
-.portfolioPage .banner .latest-projects .second-column .projects {
-  display: flex;
+  gap: 2rem;
   flex-wrap: wrap;
+  margin: 2rem auto;
+  padding: 0 4rem;
 }
 
-.portfolioPage .banner .remaining-projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 20px;
-}
-.card {
+.portfolioPage .projects .project {
   width: 100%;
-  padding: 25px;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-  border-radius: 8%;
-  height: fit-content;
-  margin-bottom: 25px;
+  max-width: 350px;
+  height: 450px;
+  background: #27272a;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.portfolioPage .banner .latest-projects .first-column .card {
-  height: 100%;
-}
-.second-column .upper_layer {
-  width: 50%;
-  padding: 0 10px;
-}
-.remaining-projects .upper_layer {
-  width: 33.333%;
-  padding: 0 10px;
-}
-.card img {
+
+.portfolioPage .projects .project img {
   width: 100%;
-  height: 350px;
-  border-radius: 8%;
-  margin-bottom: 1rem;
+  height: 80%;
+  object-fit: cover;
+  transition: 0.5s;
 }
-.card div {
+
+.portfolioPage .projects .project .overlay {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 57px;
+  margin-top: 1rem;
 }
 
-.card div span p:nth-of-type(1) {
-  font-size: 1rem;
-  color: gray;
-  margin-bottom: 10px;
+.portfolioPage .projects .project .overlay .link-to-project {
+  border-radius: 50%;
+  padding: 5px;
+  border: 2px solid gray;
+  color: #fff;
 }
-.card div span p:nth-of-type(2) {
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-.card div span a {
-  display: flex;
-}
-.card div span a img {
-  height: 50px;
-  width: 50px;
-  opacity: 0.5;
-  margin-bottom: 0;
-}
-.card div span a:hover img {
-  opacity: 1;
-  transition: 0.3s;
-}
-.first-column .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.first-column .card img {
-  height: 100%;
-}
-@media (max-width: 1170px) {
-  .banner .header,
-  .second-column .header {
+
+@media (max-width: 475px) {
+  .hamburger {
+    display: block;
+  }
+  .portfolioPage h1 {
     font-size: 2rem;
+    margin-top: 5rem;
   }
-  .banner .header img,
-  .second-column .header img {
-    height: 50px;
-    width: 50px;
+  .portfolioPage .projects {
+    padding: 0 1rem;
   }
-}
-@media (max-width: 1050px) {
-  .card img {
-    height: 220px;
+  .portfolioPage .projects .project {
+    max-width: 300px;
+    height: auto;
   }
-}
-@media (max-width: 775px) {
-  .banner .header,
-  .second-column .header {
-    font-size: 1.5rem;
+
+  .portfolioPage .projects .project img {
+    height: 50%;
   }
-}
-@media (max-width: 767px) {
-  .banner .header {
-    display: flex;
-  }
-  .second-column .header {
-    display: none;
-  }
-  .card {
-    border-radius: 40px;
-  }
-  .portfolioPage .banner .latest-projects {
+
+  .portfolioPage .projects .project .overlay {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
   }
-  .second-column .upper_layer,
-  .remaining-projects .upper_layer {
-    width: 100%;
-  }
-  .card img {
-    height: 250px;
-    width: 350px;
-    border-radius: 40px;
-  }
-}
-@media (max-width: 586px) {
-  .card {
-    padding: 15px;
-  }
-  .card img {
-    width: 100%;
-  }
-  .card div {
-    padding-left: 15px;
+
+  .portfolioPage .projects .project .overlay .link-to-project {
+    padding: 1px;
   }
 }
