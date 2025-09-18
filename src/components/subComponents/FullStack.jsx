@@ -1,50 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "motion/react";
-import { ExternalLink, Github, Database, Server, Globe } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
+import { fullStackProjects } from "../../constants";
 
 const FullStack = () => {
-  const fullStackProjects = [
-    {
-      _id: "1",
-      title: "NoteNexus",
-      category: "Notes Management System",
-      thumbnail: "/src/assets/notenexus.jpg",
-      projectUrl: "https://notenexus-nmow.onrender.com",
-      githubUrl: "https://github.com/mk-manishkumar/notenexus",
-      description: "A comprehensive note-taking application with user authentication, real-time synchronization, and advanced search capabilities. Features rich text editing and collaborative sharing.",
-      technologies: ["Node.js", "Express.js", "MongoDB", "JWT", "EJS"],
-      gradient: "from-emerald-400 to-white-500",
-      icon: Database,
-      features: ["User Authentication", "Real-time Sync", "Rich Text Editor", "Search & Filter"],
-    },
-    {
-      _id: "2",
-      title: "CoinKeeper",
-      category: "Personal Finance Tracker",
-      thumbnail: "/src/assets/coinkeeper.jpg",
-      projectUrl: "https://coinkeeper-ngmb.onrender.com",
-      githubUrl: "https://github.com/mk-manishkumar/coinkeeper",
-      description: "A full-featured expense tracking application with budget management, financial analytics, and data visualization. Helps users manage their finances effectively.",
-      technologies: ["Node.js", "Express.js", "MongoDB", "ReactJS", "Tailwind CSS", "shadcn/ui"],
-      gradient: "from-purple-400 to-pink-500",
-      icon: Server,
-      features: ["Expense Tracking", "Budget Management"],
-    },
-    {
-      _id: "3",
-      title: "WatchWise",
-      category: "Video Streaming Platform",
-      thumbnail: "/src/assets/watchwise.jpg",
-      projectUrl: "https://watchwise-yt.vercel.app/",
-      githubUrl: "https://github.com/mk-manishkumar/watchwise",
-      description: "A modern video streaming platform with advanced search, playlist management, and user recommendations. Built with React and integrated with YouTube API.",
-      technologies: ["React", "YouTube API", "Tailwind CSS", "Context API", "React Router", "Vercel"],
-      gradient: "from-cyan-400 to-white-500",
-      icon: Globe,
-      features: ["Advanced Search"],
-    },
-  ];
-
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },

@@ -1,47 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "motion/react";
-import { ExternalLink, Github, Code, Palette, Smartphone } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
+import { frontendProjects } from "../../constants";
 
 const Frontend = () => {
-  const frontendProjects = [
-    {
-      _id: "1",
-      title: "UI Projects Collection",
-      category: "HTML & CSS",
-      thumbnail: "/src/assets/html_css.jpg",
-      projectUrl: "https://html-css-projects-mk.netlify.app",
-      githubUrl: "https://github.com/mk-manishkumar/html-css-projects",
-      description: "A comprehensive collection of UI components and layouts built with pure HTML and CSS, showcasing modern design principles and responsive techniques.",
-      technologies: ["HTML5", "CSS3", "Flexbox", "Grid"],
-      gradient: "from-orange-400 to-red-500",
-      icon: Code,
-    },
-    {
-      _id: "2",
-      title: "Tailwind CSS Showcase",
-      category: "UI/UX Design",
-      thumbnail: "/src/assets/tailwind.jpg",
-      projectUrl: "https://tailwind-projects-mk.netlify.app",
-      githubUrl: "https://github.com/mk-manishkumar/tailwind-projects",
-      description: "Beautiful and responsive UI components built with Tailwind CSS, featuring modern design patterns and utility-first approach.",
-      technologies: ["Tailwind CSS", "HTML5", "Responsive Design"],
-      gradient: "from-cyan-400 to-blue-500",
-      icon: Palette,
-    },
-    {
-      _id: "3",
-      title: "JavaScript Mini Projects",
-      category: "Interactive Frontend",
-      thumbnail: "/src/assets/js_projects.jpg",
-      projectUrl: "https://js-mini-projects-mk.netlify.app/",
-      githubUrl: "https://github.com/mk-manishkumar/js-mini-projects",
-      description: "Interactive JavaScript projects demonstrating DOM manipulation, API integration, and modern ES6+ features with clean, responsive interfaces.",
-      technologies: ["JavaScript ES6+", "DOM API", "Fetch API", "CSS3"],
-      gradient: "from-yellow-400 to-orange-500",
-      icon: Smartphone,
-    },
-  ];
-
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },

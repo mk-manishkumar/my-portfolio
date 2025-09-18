@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "motion/react";
 import { useState } from "react";
-import { Code, Calendar, MapPin, Award, Zap, Database, Globe, Smartphone, Cpu, Layout, Shield, GitBranch } from "lucide-react";
+import { Code, Calendar, MapPin, Award } from "lucide-react";
 import Navbar from "./Navbar";
+import { education, experience, techSkills } from "../constants";
 
 const Career = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null);
@@ -62,42 +63,7 @@ const Career = () => {
     },
   };
 
-  // Sample data
-  const experience = {
-    title: "Associate Software Engineer",
-    company: "Ekaggata Technologies",
-    duration: "May 2023 - Nov 2023",
-    location: "Bangalore, India (Remote)",
-    description: "Designed and implemented multiple web views in Odoo to streamline management of critical business information and transactional data across multiple stores.",
-    achievements: ["Built solutions that significantly improved tracking and managing refund details for a large store network"],
-  };
-
-  const education = {
-    degree: "Bachelor of Computer Application",
-    school: "CIMAGE Group of Institute",
-    duration: "Oct 2016 - Jan 2020",
-    location: "Patna, India",
-    gpa: "8.2/10",
-    relevant: "Specialized in Computer Application and Software Development",
-  };
-
-  const techSkills = [
-    { name: "React", icon: Layout, color: "from-blue-500 to-cyan-500" },
-    { name: "Node.js", icon: Code, color: "from-green-500 to-emerald-500" },
-    { name: "Python", icon: Code, color: "from-yellow-500 to-orange-500" },
-    { name: "TypeScript", icon: Code, color: "from-blue-600 to-indigo-600" },
-    { name: "MongoDB", icon: Database, color: "from-green-600 to-teal-600" },
-    { name: "Next.js", icon: Layout, color: "from-gray-600 to-gray-800" },
-    { name: "Docker", icon: Cpu, color: "from-blue-400 to-blue-600" },
-    { name: "Vercel", icon: Globe, color: "from-purple-600 to-indigo-600" },
-    { name: "Express.js", icon: Code, color: "from-green-400 to-emerald-400" },
-    { name: "Tailwind CSS", icon: Layout, color: "from-cyan-400 to-blue-400" },
-    { name: "Framer Motion", icon: Zap, color: "from-pink-400 to-rose-400" },
-    { name: "Git", icon: GitBranch, color: "from-orange-500 to-red-500" },
-    { name: "GSAP", icon: Zap, color: "from-green-500 to-teal-500" },
-    { name: "Linux", icon: Shield, color: "from-yellow-600 to-orange-600" },
-    { name: "FastAPI", icon: Code, color: "from-teal-500 to-cyan-500" },
-  ];
+  
 
   return (
     <section className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">

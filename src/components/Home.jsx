@@ -2,10 +2,8 @@
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
-import { AiFillLinkedin } from "react-icons/ai";
-import { FaGithubSquare, FaGlobe } from "react-icons/fa";
-import { RiTwitterXLine } from "react-icons/ri";
 import { Download, Sparkles, Code, Coffee } from "lucide-react";
+import { socialLinks } from "../constants";
 
 const Home = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -111,12 +109,7 @@ const Home = () => {
     },
   };
 
-  const socialLinks = [
-    { Icon: AiFillLinkedin, url: "https://www.linkedin.com/in/mk-manishkumar/", color: "hover:text-blue-400" },
-    { Icon: RiTwitterXLine, url: "https://x.com/_manishmk", color: "hover:text-gray-300" },
-    { Icon: FaGithubSquare, url: "https://github.com/mk-manishkumar", color: "hover:text-purple-400" },
-    { Icon: FaGlobe, url: "https://manishmk.vercel.app/", color: "hover:text-green-400" },
-  ];
+  
 
   return (
     <section className="min-h-screen flex flex-col justify-between overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative" onMouseMove={handleMouseMove} tabIndex={-1} aria-hidden="true">
