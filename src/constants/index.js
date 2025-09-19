@@ -1,7 +1,9 @@
 import { AiFillLinkedin } from "react-icons/ai";
-import { FaGithubSquare, FaGlobe } from "react-icons/fa";
+import { FaBlog, FaGithubSquare, FaGlobe } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
-import { User, Briefcase, BookOpen, FolderOpen, Zap, Database, Globe, Cpu, Layout, Shield, GitBranch, Code, Palette, Smartphone, Server } from "lucide-react";
+import { User, Briefcase, BookOpen, FolderOpen, Zap, Database, Globe, Cpu, Layout, Shield, GitBranch, Code, Palette, Smartphone, Server, Pizza } from "lucide-react";
+import { CiShop } from "react-icons/ci";
+import { TbJoinBevel } from "react-icons/tb";
 
 // Social media links
 export const socialLinks = [
@@ -83,6 +85,18 @@ export const techSkills = [
 export const frontendProjects = [
   {
     _id: "1",
+    title: "Pixenbuy",
+    category: "React Projects",
+    thumbnail: "/src/assets/pixenbuy.jpg",
+    projectUrl: "https://pixenbuy.vercel.app",
+    githubUrl: "https://github.com/mk-manishkumar/pixenbuy",
+    description: "It is an e-commerce application built with React and TypeScript using data from the Fake Store API. It was created as part of an internship assignment to demonstrate proficiency in component design, state management, routing, and basic UI/UX.",
+    technologies: ["ReactJS", "TypeScript", "Tailwind CSS", "shadcn/ui"],
+    gradient: "from-orange-400 to-red-500",
+    icon: CiShop,
+  },
+  {
+    _id: "2",
     title: "UI Projects Collection",
     category: "HTML & CSS",
     thumbnail: "/src/assets/html_css.jpg",
@@ -94,7 +108,7 @@ export const frontendProjects = [
     icon: Code,
   },
   {
-    _id: "2",
+    _id: "3",
     title: "Tailwind CSS Showcase",
     category: "UI/UX Design",
     thumbnail: "/src/assets/tailwind.jpg",
@@ -106,59 +120,97 @@ export const frontendProjects = [
     icon: Palette,
   },
   {
-    _id: "3",
-    title: "JavaScript Mini Projects",
+    _id: "4",
+    title: "JavaScript Projects",
     category: "Interactive Frontend",
     thumbnail: "/src/assets/js_projects.jpg",
-    projectUrl: "https://js-mini-projects-mk.netlify.app/",
-    githubUrl: "https://github.com/mk-manishkumar/js-mini-projects",
+    projectUrl: "https://js-projects-mk.netlify.app",
+    githubUrl: "https://github.com/mk-manishkumar/javascript-projects",
     description: "Interactive JavaScript projects demonstrating DOM manipulation, API integration, and modern ES6+ features with clean, responsive interfaces.",
     technologies: ["JavaScript ES6+", "DOM API", "Fetch API", "CSS3"],
     gradient: "from-yellow-400 to-orange-500",
     icon: Smartphone,
+  },
+  {
+    _id: "5",
+    title: "Pizzify",
+    category: "React Projects",
+    thumbnail: "/src/assets/pizzify.jpg",
+    projectUrl: "https://pizzify.netlify.app",
+    githubUrl: "https://github.com/mk-manishkumar/pizzify",
+    description: "It s an interactive pizza ordering application built with React and TypeScript using Redux Toolkit for global state management. ",
+    technologies: ["ReactJS", "TypeScript", "Tailwind CSS", "Redux"],
+    gradient: "from-orange-400 to-red-500",
+    icon: Pizza,
   },
 ];
 
 
 // Full Stack projects
 export const fullStackProjects = [
-   {
-     _id: "1",
-     title: "NoteNexus",
-     category: "Notes Management System",
-     thumbnail: "/src/assets/notenexus.jpg",
-     projectUrl: "https://notenexus-nmow.onrender.com",
-     githubUrl: "https://github.com/mk-manishkumar/notenexus",
-     description: "A comprehensive note-taking application with user authentication, real-time synchronization, and advanced search capabilities. Features rich text editing and collaborative sharing.",
-     technologies: ["Node.js", "Express.js", "MongoDB", "JWT", "EJS"],
-     gradient: "from-emerald-400 to-white-500",
-     icon: Database,
-     features: ["User Authentication", "Real-time Sync", "Rich Text Editor", "Search & Filter"],
-   },
-   {
-     _id: "2",
-     title: "CoinKeeper",
-     category: "Personal Finance Tracker",
-     thumbnail: "/src/assets/coinkeeper.jpg",
-     projectUrl: "https://coinkeeper-ngmb.onrender.com",
-     githubUrl: "https://github.com/mk-manishkumar/coinkeeper",
-     description: "A full-featured expense tracking application with budget management, financial analytics, and data visualization. Helps users manage their finances effectively.",
-     technologies: ["Node.js", "Express.js", "MongoDB", "ReactJS", "Tailwind CSS", "shadcn/ui"],
-     gradient: "from-purple-400 to-pink-500",
-     icon: Server,
-     features: ["Expense Tracking", "Budget Management"],
-   },
-   {
-     _id: "3",
-     title: "WatchWise",
-     category: "Video Streaming Platform",
-     thumbnail: "/src/assets/watchwise.jpg",
-     projectUrl: "https://watchwise-yt.vercel.app/",
-     githubUrl: "https://github.com/mk-manishkumar/watchwise",
-     description: "A modern video streaming platform with advanced search, playlist management, and user recommendations. Built with React and integrated with YouTube API.",
-     technologies: ["React", "YouTube API", "Tailwind CSS", "Context API", "React Router", "Vercel"],
-     gradient: "from-cyan-400 to-white-500",
-     icon: Globe,
-     features: ["Advanced Search"],
-   },
- ];
+  {
+    _id: "1",
+    title: "Writescape",
+    category: "Blogging Platform",
+    thumbnail: "/src/assets/writescape.jpg",
+    projectUrl: "https://writescape-mk.vercel.app",
+    githubUrl: "https://github.com/mk-manishkumar/writescape",
+    description: "It is a AI based blogging platform that I have created using MERN STACK. This platform provides a seamless writing and publishing experience, allowing users to create, manage, and share their blog posts easily.",
+    technologies: ["Node.js", "Express.js", "MongoDB", "ReactJS", "Tailwind CSS", "shadcn/ui", "Imagekit", "Framer Motion", "Gemini API"],
+    gradient: "from-emerald-400 to-white-500",
+    icon: FaBlog,
+    features: ["User Authentication", "Real-time Sync", "Rich Text Editor", "Search & Filter"],
+  },
+  {
+    _id: "2",
+    title: "Worknest",
+    category: "Job Portal",
+    thumbnail: "/src/assets/worknest.jpg",
+    projectUrl: "https://worknest-mk.vercel.app",
+    githubUrl: "https://github.com/mk-manishkumar/worknest",
+    description: "It is a robust MERN-stack job application platform designed to provide a responsive and user-friendly interface for job seekers and recruiters alike.",
+    technologies: ["Node.js", "Express.js", "MongoDB", "ReactJS", "Tailwind CSS", "shadcn/ui", "Cloudinary", "Framer Motion"],
+    gradient: "from-emerald-400 to-white-500",
+    icon: TbJoinBevel,
+    features: ["User Authentication", "Real-time Sync", "Rich Text Editor", "Search & Filter"],
+  },
+  {
+    _id: "3",
+    title: "NoteNexus",
+    category: "Notes Management System",
+    thumbnail: "/src/assets/notenexus.jpg",
+    projectUrl: "https://notenexus-nmow.onrender.com",
+    githubUrl: "https://github.com/mk-manishkumar/notenexus",
+    description: "A comprehensive note-taking application with user authentication, real-time synchronization, and advanced search capabilities. Features rich text editing and collaborative sharing.",
+    technologies: ["Node.js", "Express.js", "MongoDB", "JWT", "EJS"],
+    gradient: "from-emerald-400 to-white-500",
+    icon: Database,
+    features: ["User Authentication", "Real-time Sync", "Rich Text Editor", "Search & Filter"],
+  },
+  {
+    _id: "4",
+    title: "CoinKeeper",
+    category: "Personal Finance Tracker",
+    thumbnail: "/src/assets/coinkeeper.jpg",
+    projectUrl: "https://coinkeeper-mk.vercel.app",
+    githubUrl: "https://github.com/mk-manishkumar/coinkeeper",
+    description: "A full-featured expense tracking application with budget management, financial analytics, and data visualization. Helps users manage their finances effectively.",
+    technologies: ["Node.js", "Express.js", "MongoDB", "ReactJS", "Tailwind CSS", "shadcn/ui", "TypeScript"],
+    gradient: "from-purple-400 to-pink-500",
+    icon: Server,
+    features: ["Expense Tracking", "Budget Management"],
+  },
+  {
+    _id: "5",
+    title: "WatchWise",
+    category: "Video Info Platform",
+    thumbnail: "/src/assets/watchwise.jpg",
+    projectUrl: "https://watchwise-yt.vercel.app/",
+    githubUrl: "https://github.com/mk-manishkumar/watchwise",
+    description: "A modern video streaming platform with advanced search, playlist management, and user recommendations. Built with React and integrated with YouTube API.",
+    technologies: ["React", "YouTube API", "Tailwind CSS", "Context API", "React Router", "Vercel"],
+    gradient: "from-cyan-400 to-white-500",
+    icon: Globe,
+    features: ["Advanced Search"],
+  },
+];

@@ -89,7 +89,6 @@ const Navbar = () => {
       className={`w-full text-white px-4 md:px-8 py-4 sticky top-0 z-50 transition-all duration-300 ${scrolled ? "bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl" : "bg-gray-900/80 backdrop-blur-md"}`}
       style={{
         opacity,
-        backdropFilter: backdropBlur.to((v) => `blur(${v}px)`)
       }}
       initial="hidden"
       animate="visible"
@@ -131,12 +130,7 @@ const Navbar = () => {
                 ) : (
                   <Link to={item.path}>
                     <motion.div
-                      className={
-                        "group relative flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 " +
-                        (active
-                          ? "bg-gradient-to-r " + item.gradient + " text-white shadow-lg"
-                          : "hover:bg-gray-800/50 text-gray-300 hover:text-white")
-                      }
+                      className={"group relative flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 " + (active ? "bg-gradient-to-r " + item.gradient + " text-white shadow-lg" : "hover:bg-gray-800/50 text-gray-300 hover:text-white")}
                       whileHover={{
                         scale: 1.05,
                         boxShadow: active ? "0 8px 25px rgba(59, 130, 246, 0.4)" : "0 4px 15px rgba(0, 0, 0, 0.3)",
@@ -203,35 +197,13 @@ const Navbar = () => {
               return (
                 <motion.div key={item.name} variants={mobileItemVariants}>
                   {item.external ? (
-                    <motion.a
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={
-                        "flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-300 " +
-                        (active
-                          ? "bg-gradient-to-r " + item.gradient + " text-white shadow-lg"
-                          : "hover:bg-gray-700/50 text-gray-300 hover:text-white")
-                      }
-                      onClick={() => setOpen(false)}
-                      whileHover={{ x: 5 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
+                    <motion.a href={item.href} target="_blank" rel="noopener noreferrer" className={"flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-300 " + (active ? "bg-gradient-to-r " + item.gradient + " text-white shadow-lg" : "hover:bg-gray-700/50 text-gray-300 hover:text-white")} onClick={() => setOpen(false)} whileHover={{ x: 5 }} whileTap={{ scale: 0.98 }}>
                       <IconComponent className="w-5 h-5" />
                       <span className="font-medium">{item.name}</span>
                     </motion.a>
                   ) : (
                     <Link to={item.path} onClick={() => setOpen(false)}>
-                      <motion.div
-                        className={
-                          "flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-300 " +
-                          (active
-                            ? "bg-gradient-to-r " + item.gradient + " text-white shadow-lg"
-                            : "hover:bg-gray-700/50 text-gray-300 hover:text-white")
-                        }
-                        whileHover={{ x: 5 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
+                      <motion.div className={"flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-300 " + (active ? "bg-gradient-to-r " + item.gradient + " text-white shadow-lg" : "hover:bg-gray-700/50 text-gray-300 hover:text-white")} whileHover={{ x: 5 }} whileTap={{ scale: 0.98 }}>
                         <IconComponent className="w-5 h-5" />
                         <span className="font-medium">{item.name}</span>
                       </motion.div>

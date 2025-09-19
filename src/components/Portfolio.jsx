@@ -205,7 +205,7 @@ const Portfolio = () => {
 
         {/* Projects Display */}
         <motion.div
-          key={activeFilter} // This will trigger re-animation when filter changes
+          key={activeFilter} 
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}

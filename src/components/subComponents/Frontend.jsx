@@ -67,7 +67,7 @@ const Frontend = () => {
               <motion.img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover" variants={imageVariants} />
 
               {/* Gradient overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-20 group-hover:opacity-30 transition-opacity duration-300`} />
+              <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-20 group-hover:opacity-30 transition-opacity duration-300 pointer-events-none`} />
 
               {/* Project category badge */}
               <motion.div className="absolute top-4 left-4 flex items-center gap-2 px-3 py-1 bg-black/50 backdrop-blur-sm rounded-full text-white text-sm" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 + index * 0.1 }}>
@@ -104,7 +104,16 @@ const Frontend = () => {
               {/* Technologies */}
               <motion.div className="flex flex-wrap gap-2 mb-4" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 + index * 0.1 }}>
                 {project.technologies.map((tech, techIndex) => (
-                  <motion.span key={tech} className={`px-3 py-1 bg-gradient-to-r ${project.gradient} bg-opacity-20 text-xs rounded-full text-white border border-gray-600/30`} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.7 + index * 0.1 + techIndex * 0.05 }} whileHover={{ scale: 1.05 }}>
+                  <motion.span
+                    key={tech}
+                    className={`px-3 py-1 bg-gradient-to-r ${project.gradient} bg-opacity-20 text-xs rounded-full text-white border border-gray-600/30`}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                      delay: 0.7 + index * 0.1 + techIndex * 0.05,
+                    }}
+                    whileHover={{ scale: 1.05 }}
+                  >
                     {tech}
                   </motion.span>
                 ))}
@@ -125,7 +134,7 @@ const Frontend = () => {
             </div>
 
             {/* Animated border */}
-            <motion.div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-20`} style={{ padding: "2px" }} initial={{ opacity: 0 }} whileHover={{ opacity: 0.2 }} transition={{ duration: 0.3 }} />
+            <motion.div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-20 pointer-events-none`} style={{ padding: "2px" }} initial={{ opacity: 0 }} whileHover={{ opacity: 0.2 }} transition={{ duration: 0.3 }} />
           </motion.div>
         );
       })}

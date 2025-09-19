@@ -68,7 +68,7 @@ const Career = () => {
   return (
     <section className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
       {/* NAVBAR */}
-      <Navbar />
+      <Navbar currentPage = "career"/>
 
       <motion.div className="flex-1 max-w-6xl mx-auto px-6 py-12 w-full" variants={containerVariants} initial="hidden" animate="visible">
         {/* Header */}
